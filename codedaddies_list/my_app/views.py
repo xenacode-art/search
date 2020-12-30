@@ -1,9 +1,9 @@
 import requests
 import re
-#from requests.compat import qoute_plus
-#from bs4 import Beautifulsoup
+#from requests.compat import quote_plus
+#from bs4 import BeautifulSoup
 #from bs4.element import Tag
-#from .models import Search
+from .models import Search
 from django.shortcuts import render
 
 #page = requests.get(

@@ -16,11 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 from my_app import views
+from SematicUi import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('css', include('my_app.urls')),
     path('',views.home,name = 'home_page'),
+    path('css', include('SematicUi.urls')),
+    path('',views.home,name = 'home_page'),
+    
 #    path('new-search/',views.new_search, name='new-search')
+
 ]
