@@ -1,6 +1,6 @@
 import requests
 import re
-#from requests.compat import quote_plus
+from requests.compat import quote_plus
 #from bs4 import BeautifulSoup
 #from bs4.element import Tag
 from .models import Search
@@ -11,5 +11,10 @@ from django.shortcuts import render
 #)
 
 
-def home(request):
+def my_app(request):
  return render(request,'base.html')
+
+
+
+def new_search(request):
+ return render(request, 'my_app/new_search.html')
