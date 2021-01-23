@@ -1,17 +1,37 @@
+<html>
+<body>
 {%extends 'base.html' %}
 {%load static %}
 
 
 {%block content%}
 
-<form action="{% url 'new_search'  %}" method="post">
-   {% csrf_token%}
- <input type="text" name="search" placeholder="search">
- <input type="text" name="min_price" placeholder="min price">
- <input type="text" name="max_price" placeholder="max price">
- <input type="submit" name="submit">
-</form>
+  <script src="{% static 'js/script.js' %}"></script>
 
-<div class="center">
+<h2 style="text-align:center;">{{search | title}}  </h2>
+
+ <div class="row">
+ <div class="col s4">
+ <div class="card" ondrop="drop(event)" ondragover="allowDrop(event)" style="border:1px solid black; width:400px; height:250px" color="maroon">
+ 
+
+ <div class="card-image">
+<img draggable="true" />
+            <a href=""><img src="{% static  'img/image.jpg' %}"  class="ui large bordered rounded image" draggable="true"
+ondragstart="drag(event)" width="150" height="50" alt="" /> </a> 
+ </div>
+
+ <div class="card-content">
+  <p> TEST </p>
+ </div>
+<div class="card-action">
+   <a href="/"> View listing:Test PRICE</a>
+</div>
+</div>
+
+ </div>
+ </div>
+</body>
+</html>
 {% endblock content%}  
-
+
